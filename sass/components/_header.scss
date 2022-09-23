@@ -1,0 +1,135 @@
+.header-info {
+  display: none;
+
+  @media screen and(min-width:821px) {
+    display: flex;
+    padding-top: 4px;
+    padding-bottom: 3px;
+    align-items: baseline;
+    justify-content: space-between;
+    &__title {
+      display: inline-block;
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 1.45;
+      text-align: center;
+      letter-spacing: 0.8px;
+
+      color: var(--main-color);
+    }
+    &__address {
+      font-size: 10px;
+      line-height: 1.5;
+      text-align: right;
+      letter-spacing: 0.0833333px;
+      color: var(--main-color);
+      margin-right: 24px;
+    }
+  }
+}
+.header-info__div {
+  margin-left: 24px;
+}
+.qq {
+  display: flex;
+}
+.header__mobile {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // background-image: linear-gradient(
+  //   to bottom,
+  //   rgba(51, 51, 51, 0.39),
+  //   rgba(21, 21, 21, 0.21),
+  //   rgba(0, 0, 0, 0)
+  // );
+  width: 100%;
+  padding-bottom: 31px;
+  z-index: 1;
+
+  @media screen and(min-width:821px) {
+    display: none;
+  }
+}
+.header__buttons {
+  display: flex;
+}
+.icon-menu {
+  margin-left: 16px;
+  margin-top: 22px;
+  margin-right: 16px;
+  fill: var(--secondary-color);
+  cursor: pointer;
+}
+.icon-search {
+  margin-top: 20px;
+  fill: var(--secondary-color);
+  cursor: pointer;
+}
+.icon-basket {
+  margin-top: 16px;
+  margin-right: 8px;
+  fill: var(--secondary-color);
+}
+.icon-logo {
+  margin-top: 20px;
+  fill: var(--secondary-color);
+}
+.btn {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.header__basket-btn {
+  margin-left: auto;
+}
+.header__basket {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--basket-color);
+  margin-top: 18px;
+  margin-right: 16px;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.45;
+  text-align: center;
+  padding-top: 3px;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+
+  color: var(--main-color);
+}
+.header__logo {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.5;
+  letter-spacing: 0.95px;
+  color: var(--secondary-color);
+  margin-top: 10px;
+}
+
+.header {
+  &.active {
+    position: relative;
+    & .icon-menu {
+      fill: var(--main-color);
+    }
+    & .icon-search {
+      fill: var(--main-color);
+    }
+    & .icon-logo {
+      fill: var(--main-color);
+    }
+    & .icon-basket {
+      fill: var(--main-color);
+    }
+    & .header__mobile {
+      background-image: none;
+    }
+  }
+}

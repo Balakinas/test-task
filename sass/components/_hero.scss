@@ -1,0 +1,28 @@
+.hero {
+  background-color: beige;
+  background-image: url('../images/hero/hero@360.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 360px;
+  height: 480px;
+  margin: 0 auto;
+
+  @media screen and(min-width:821px) {
+    background-image: url('../images/hero/hero@1440.jpg');
+    height: 657px;
+  }
+}
+.hero__title {
+  display: none;
+  @media screen and(min-width:821px) {
+    display: block;
+    padding-top: 320px;
+    text-align: center;
+
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--secondary-color);
+  }
+}
